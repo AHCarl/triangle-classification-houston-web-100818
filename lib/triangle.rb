@@ -9,7 +9,7 @@ class Triangle
   
   def kind
     sides = [side1, side2, side3]
-    side
+    sides.sort
     if ((side1 + side2) < side3)  || ((self.side1 <= 0 || self.side2 <= 0) || self.side3 <= 0) 
         raise TriangleError.new("Please enter a valid triangle")
     elsif self.side1 == self.side2 && self.side2 == self.side3
