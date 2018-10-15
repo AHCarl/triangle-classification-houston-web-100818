@@ -8,7 +8,7 @@ class Triangle
   end
   
   def kind
-    if (side1 + side2 < side3 || ((side1 == 0 || side2 == 0) || side3 == 0)) || ((side1 < 0 || side2 < 0) || side3 < 0)
+    if (self.side1 + self.side2 < self.side3 || ((self.side1 == 0 || self.side2 == 0) || self.side3 == 0)) || ((self.side1 < 0 || self.side2 < 0) || self.side3 < 0)
       begin 
         raise TriangleError
       rescue TriangleError => error 
@@ -16,9 +16,9 @@ class Triangle
       end
     end
     
-    if side1 == side2 && side2 == side3
+    if self.side1 == self.side2 && self.side2 == self.side3
       return :equilateral
-    elsif (side1 == side2 || side1 == side3) || side2 == side3
+    elsif (self.side1 == self.side2 || self.side1 == self.side3) || self.side2 == self.side3
       return :isosceles
     else 
       return :scalene
